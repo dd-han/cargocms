@@ -215,14 +215,17 @@
               <p class="padding-5"><%= recipe.description %></p>
             </li>
           </ul>
-          <hr/>
 
-          <!-- <label for="message">備註</label> -->
-          <ul class="list-unstyled list-inline message">
-            <li>
-              <p class="padding-5"><%= recipe.message %></p>
-            </li>
-          </ul>
+
+		  <% if(recipe.message.length >0){ %>
+            <hr/>
+            <!-- <label for="message">備註</label> -->
+            <ul class="list-unstyled list-inline message">
+              <li>
+                <p class="padding-5"><%= recipe.message %></p>
+              </li>
+            </ul>
+		  <% } %>
         </h4>
       </div>
       <% if(social.targets.length > 0){ %>
